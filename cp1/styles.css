@@ -1,0 +1,78 @@
+/*
+    Name: Thang Tran
+    CS 132 - CP1
+
+    This is the styles.css page for my About Me website, where I give my each 
+    page on my website the same theme. The goal of this design was to express a 
+    chill and laid back but also inviting and cheerful vibe through the use of 
+    a palette of cool colors and a simple yet aesthetically pleasing layout.
+*/
+
+h1 {
+    font-size: 36pt;
+}
+
+h2 {
+    font-size: 24pt;
+}
+
+body {
+    margin: 0;
+    font-family: 'Merienda', sans-serif;
+}
+
+header, 
+footer {
+    text-align: center;
+    font-size: 18pt;
+}
+
+header, 
+footer, 
+a {
+    color: white;
+}
+
+header, 
+footer, 
+nav li > a:hover {
+    background-color: #16425b;
+}
+
+header,
+footer,
+nav > ul,
+main {
+    display: flex;
+}
+
+header,
+footer,
+main {
+    flex-direction: column;
+}
+
+nav > ul {
+    list-style-type: none;
+    padding: 10px;
+    column-gap: 12px;
+    background-color: #2f6690;
+}
+
+nav li > a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 16pt;
+}
+
+main {
+    align-items: flex-start;
+    padding: 30px;
+    background-color: #81c3d7;
+    font-size: 14pt;
+}
+
+img {
+    width: auto;
+    height: 500px;
+}
