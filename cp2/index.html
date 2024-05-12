@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: May 11th, 2024
+
+    This is the index.html page for a choose-your-own-adventure zombie survival
+    game. It features a UI with an inventory and multiple views as the user
+    progresses through the game with a selection of different choices.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zombie Survival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" 
+     rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+    <script defer src="adventure.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Zombie Survival</h1>
+    </header>
+
+    <section id="game-view">
+        <!-- Holds current items -->
+        <section id="inventory">
+            <h2>Inventory</h2>
+            <div> 
+                <!-- Fills with current items using JS -->
+            </div>
+        </section>
+
+        <!-- Main menu view -->
+        <section id="menu-view">
+            <h2>Welcome!</h2>
+            <p>
+                You're currently asleep as a deadly zombie outbreak occurs
+                around you. Do you have what it takes to survive?
+            </p>
+            <button id="start-btn">Wake up!</button>
+        </section>
+
+        <!-- Weapon choice view -->
+        <section id="weapon-view" class="hidden">
+            <h2>Pick your weapon!</h2>
+            <p>
+                Thinking on your feet, you look around your house for a weapon.
+                The following are what you found, but you can only carry one!
+            </p>
+            <div>
+                <img id="baseball-bat" src="img/baseball-bat.jpg" alt="Baseball bat; Source: 
+                https://www.amazon.com/Heros-Edge-SG_B01L2QXFYS_US-Foam-Baseball/dp/B01M5GEC2K">
+                <img id="hammer" src="img/hammer.jpg" alt="Large hammer; Source:
+                https://assetstore.unity.com/packages/3d/props/weapons/fantasy-hammer-02-175943">
+                <img id="machete" src="img/machete.jpg" alt="Machete; Source:
+                https://www.amazon.com/Tramontina-TT1018-Machete-Wood-Sword/dp/B00367P3TC">
+            </div>
+        </section>
+
+        <!-- Supply choice view -->
+        <section id="supply-view" class="hidden">
+            <h2>Now for Supplies!</h2>
+            <p>
+                Zombies are starting to break in! You decide it would be best to
+                find a safe haven for yourself. Before you leave, you find that
+                you have enough space for supplies, but only one set. 
+                Choose wisely!
+            </p>
+            <div>
+                <img id="food" src="img/food.jpg" alt="Canned food; Source: 
+                https://www.foodandwine.com/hawaii-has-a-complicated-relationship-with-canned-food-6827917">
+                <img id="water" src="img/water.png" alt="Water bottles; Source: 
+                https://www.factsaboutbpa.org/blog/three-reasons-safely-drink-out-plastic-water-bottles/">
+                <img id="furby" src="img/furby.jpg" alt="Furby; Source: 
+                https://www.amazon.com/Furby-Boom-Crystal-Pink-Blue/dp/B00LD6KF0U">
+            </div>
+        </section>
+
+        <!-- Location choice view -->
+        <section id="location-view" class="hidden">
+            <h2>Where to go?</h2>
+            <p>
+                Acquiring a map, you find three places within a reasonable
+                distance to seek shelter. Where do you go?
+            </p>
+            <div>
+                <img id="mall" src="img/mall.jpg" alt="Shopping mall; Source: 
+                https://commons.wikimedia.org/wiki/File:2018_Mall_of_America_01.jpg">
+                <img id="bunker" src="img/bunker.jpg" alt="Bunker; Source: 
+                https://broadwaytower.co.uk/nuclear-bunker/">
+                <img id="field" src="img/field.jpg" alt="Field; Source: 
+                https://stock.adobe.com/search?k=plain+field">
+            </div>
+        </section>
+    </section>
+
+    <section id="end-view" class="hidden">
+        <!-- Fills with victory or defeat messages using JS -->
+    </section>
+
+    <footer>
+        <p>
+            Color Palette was used from 
+            <a href="https://coolors.co/palettes/trending">Coolors</a>.
+        </p>
+        <p>All images not my own are cited in alt text.</p>
+        <p>Inspired by Burger Fever</p>
+    </footer>
+</body>
+
+</html>

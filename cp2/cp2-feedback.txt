@@ -1,0 +1,11 @@
+Please fill out the following and submit with your CP 2 submission (added to help us know what to focus on when grading):
+
+1. What have you learned and applied in CP 2 since CP 1?
+    - I have learned more flexbox techniques to simplify my CSS while maintaining my desired style. I have also learned
+      and applied what I learned about JS to introduce a level of interactivity to my website.
+2. To what extent would you like feedback in CP 2 (e.g. thorough, particular areas of HTML/CSS/JS/UI)?
+    - I would like feedback on my CSS to make sure I am using good CSS practices. I would also like a bit of feedback
+      on my JS style and code breakdown decisions.
+3. Anything else you would like the grader to know?
+    - I would like to know if there was anything I might've missed in lecture (if applicable) that could have 
+      simplified my code further.

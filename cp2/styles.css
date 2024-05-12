@@ -1,0 +1,121 @@
+/*
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: May 11th, 2024
+
+    This is the styles.css page for a choose-your-own-adventure zombie survival
+    game. It provides the page with a consistent look and feel of eeriness
+    and adventure.
+*/
+
+.hidden, #game-view.hidden, #end-view.hidden, #menu-view.hidden,
+#weapon-view.hidden, #supply-view.hidden, #location-view.hidden {
+    display: none;
+}
+
+body, #game-view, #end-view, #menu-view, #weapon-view, #weapon-view > div,
+#supply-view, #supply-view > div, #location-view > div {
+    display: flex;
+}
+
+body, #menu-view, #end-view, #weapon-view, #supply-view, #location-view {
+    flex-direction: column;
+}
+
+#game-view, #weapon-view > div, #supply-view > div, #location-view > div {
+    justify-content: space-between;
+}
+
+#end-view {
+    justify-content: center;
+}
+
+img {
+    min-width: 128px;
+    width: 30%;
+}
+
+button {
+    background-color: beige;
+    color: #1b263b;
+    border-radius: 10px;
+    align-self: center;
+    width: 150px;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+body, button {
+    font-family: 'Creepster', sans-serif;
+}
+
+body > section {
+    background-color: #415a77;
+    flex-grow: 1;
+}
+
+h1, #end-view {
+    font-size: 48pt;
+}
+
+h2 {
+    font-size: 36pt;
+    margin: 15px 0;
+    padding: 5px 0;
+    border-bottom: 3px solid #1b263b;
+}
+
+h1, h2 {
+    font-weight: 400;
+}
+
+header, footer {
+    background-color: #1b263b;
+}
+
+header, footer, a, h2, #end-view {
+    color: #e63946;
+}
+
+header, footer, #inventory, #game-view > section > h2, #end-view {
+    text-align: center;
+}
+
+footer, #game-view > section > p {
+    font-size: 20pt;
+}
+
+#game-view > section > p {
+    color: beige;
+}
+
+#inventory {
+    width: 20%;
+    min-width: 200px;
+}
+
+#inventory, #menu-view, #weapon-view, #supply-view, #location-view {
+    margin: 10px;
+    border: 2px solid #1b263b;
+    padding: 0 25px;
+}
+
+#inventory > div, #end-view.victory {
+    color: #90e0ef
+}
+
+#inventory > div > p {
+    font-size: 14pt;
+}
+
+#menu-view, #weapon-view, #supply-view, #location-view {
+    width: 75%;
+    min-width: 400px;
+}
+
+#weapon-view > div, #supply-view > div, #location-view > div {
+    padding: 50px;
+}
