@@ -1,0 +1,148 @@
+/*
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: May 22nd, 2024
+
+    This is the styles.css page for my e-commerce site selling Yu-Gi-Oh cards.
+    It gives my website a consistent look and feel centered around the theme
+    of a Blue Eyes White Dragon.
+*/
+
+.hidden, #main.hidden, #product.hidden {
+    display: none;
+}
+
+body, nav > ul, #cart, form, .card-display, .card-display > figure > div,
+#search-filter, #product > div, #product figure > div, #product ul {
+    display: flex;
+}
+
+body, #product ul {
+    flex-direction: column;
+}
+
+#cart, .card-display, #search-filter {
+    justify-content: space-between;
+}
+
+#product > div {
+    justify-content: space-evenly;
+}
+
+#product ul {
+    justify-content: center;
+}
+
+nav > ul, #cart, .card-display > figure > div, #product figure > div {
+    align-items: center;
+}
+
+main, form > input {
+    flex-grow: 1;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Cinzel', sans-serif;
+    color: #165365;
+    background-color: #c1f8fd;
+}
+
+header, main, nav > ul, #product ul {
+    padding: 5px;
+}
+
+header, main, #product, footer {
+    margin: 15px;
+}
+
+h2, .card-display > figure {
+    width: 15%;
+}
+
+h3 {
+    width: 10%;
+}
+
+h1, header > img {
+    width: 20%;
+    min-width: 250px;
+}
+
+h2, h3 {
+    border-bottom: 2px solid #AD0A08;
+    min-width: 150px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0;
+}
+
+nav > ul, #product ul {
+    list-style-type: none;
+    margin: 5px;
+    column-gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #AD0A08;
+    font-size: 16pt;
+}
+
+nav a:hover, #cart > p {
+    font-weight: 700;
+}
+
+nav img {
+    width: 30px;
+}
+
+#cart, #search-filter > select {
+    margin-right: 20px;
+}
+
+#cart {
+    align-self: flex-end;
+    margin-left: auto;
+    width: 50px;
+}
+
+form, #search-filter, #product > div {
+    margin-top: 10px;
+}
+
+form {
+    width: 25%;
+    min-width: 200px;
+}
+
+#product figure {
+    width: 30%;
+}
+
+#product li, #product figcaption {
+    font-size: 30pt;
+}
+
+.card-display figcaption, #product figcaption {
+    text-align: center;
+}
+
+.card-display figcaption {
+    font-size: 12pt;
+}
+
+#product figcaption {
+    font-size: 18pt;
+}
+
+.card-display img, #product img {
+    width: 100%;
+}
+
+.add-btn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
