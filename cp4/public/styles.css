@@ -1,0 +1,120 @@
+/*
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: June 9th, 2024
+
+    This is the styles.css page for my site where users can submit and look at
+    movie reviews. It currently gives my website a playful look and feel.
+*/
+
+.hidden, input.hidden, #message-area.hidden {
+    display: none;
+}
+
+.inactive, span.inactive, img.inactive {
+    opacity: 25%;
+}
+
+body, #submit-review, #review-form, .stars, .recommendations, #search-filter, 
+#review-articles {
+    display: flex;
+}
+
+body, #submit-review, #review-form, #review-articles {
+    flex-direction: column;
+}
+
+#review-form, #review-articles {
+    justify-content: space-between;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    color: #05bbaa;
+}
+
+body, button {
+    font-family: 'Jaro', sans-serif;
+}
+
+h1 {
+    font-size: 36pt;
+}
+
+h2 {
+    font-size: 30pt;
+}
+
+h3 {
+    font-size: 24pt;
+}
+
+h2, h3 {
+    width: 25%;
+    border-bottom: 4px solid #BF40BF;
+}
+
+p {
+    font-size: 18pt;
+}
+
+main {
+    flex-grow: 1;
+}
+
+button {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+header {
+    text-align: center;
+}
+
+header, footer, main, #review-form > div {
+    padding: 15px;
+}
+
+#review-form, article {
+    width: 50%;
+}
+
+#review-form > p, #search-filter > p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#review-form > div, #review-form > input, #review-form > button, article > div {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+article, #review-form {
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+article, header, footer, #review-form {
+    background-color: aliceblue;
+}
+
+article > div {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.stars, .recommendations {
+    height: 100px;
+    justify-content: space-evenly;
+}
+
+.stars img, .recommendations img {
+    height: 100%;
+}
+
+#search-bar {
+    margin-left: 15px;
+    margin-right: 15px;
+}

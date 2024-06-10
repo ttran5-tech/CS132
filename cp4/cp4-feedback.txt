@@ -1,0 +1,12 @@
+Please fill out the following and submit with your CP 4 submission (added to help us know what to focus on when grading):
+
+1. What have you learned and applied in CP 4 since previous assignments?
+- I have learned better practices for implementing API endpoints, including parameter validation, 400 vs. 500
+  level errors, and async/await using try/catch.
+
+2. To what extent would you like feedback in CP 4 (e.g. thorough, particular areas of API design/implementation)?
+- I would like feedback on whether I could have been more thorough with my API implementation (i.e., were there
+  any details I did not include that I should have?).
+
+3. Anything else you would like the grader to know?
+- N/A

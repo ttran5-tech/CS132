@@ -1,0 +1,22 @@
+{
+    "reviews": [
+        {
+            "name": "Train to Busan",
+            "review": "What a fantastic movie. I wish I could relive watching it for the first time!",
+            "stars": 5,
+            "recommended": "yes"
+        },
+        {
+            "name": "Home Alone",
+            "review": "A holiday classic! I watch it with my family every year.",
+            "stars": 4,
+            "recommended": "yes"
+        },
+        {
+            "name": "Cats",
+            "review": "Something about this film gives off an uncanny valley feeling.",
+            "stars": 2,
+            "recommended": "no"
+        }
+    ]
+}

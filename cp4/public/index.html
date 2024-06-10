@@ -1,0 +1,100 @@
+<!-- <a href="https://www.vecteezy.com/free-png/star-vector">Star Vector PNGs by Vecteezy</a> -->
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: June 9th, 2024
+
+    This is the index.html page for my site where users can submit and look at
+    movie reviews. It currently features a view to submit reviews and an option 
+    to filter reviews by a handful of parameters.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's Movie Review Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+    <script defer src="review.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Thang's Movie Review Hub</h1>
+    </header>
+
+    <main>
+        <section id="submit-review">
+            <h2>Submit a Review!</h2>
+
+            <form id="review-form">
+                <p>Movie Name</p>
+                <input name="name" type="text" required>
+
+                <p>Review</p>
+                <input name="review" type="text" required>
+
+                <div id="star-rating" class="stars">
+                    <!-- Image from "https://www.vecteezy.com/free-png/rainbow" -->
+                    <span data-value="1">
+                        <img src="img/rainbow-star.png" alt="Rainbow Star">
+                    </span>
+                    <span data-value="2">
+                        <img src="img/rainbow-star.png" alt="Rainbow Star">
+                    </span>
+                    <span data-value="3">
+                        <img src="img/rainbow-star.png" alt="Rainbow Star">
+                    </span>
+                    <span data-value="4">
+                        <img src="img/rainbow-star.png" alt="Rainbow Star">
+                    </span>
+                    <span data-value="5">
+                        <img src="img/rainbow-star.png" alt="Rainbow Star">
+                    </span>
+                </div>
+
+                <input id="stars" class="hidden" name="stars" type="number" value="5">
+                
+                <div id="recommended-rating" class="recommendations">
+                    <!-- Image from "https://www.vecteezy.com/free-png/thumbs-up" -->
+                    <span data-value="yes">
+                        <img src="img/thumbs-up.png" alt="Thumbs Up">
+                    </span>
+                    <span data-value="no" class="inactive">
+                        <img src="img/thumbs-down.png" alt="Thumbs Down">
+                    </span>
+                </div>
+
+                <input id="recommended" class="hidden" name="recommended" type="text" value="yes">
+
+                <button id="btn">Submit</button>
+            </form>
+        </section>
+
+        <section id="message-area">
+            <p><!-- Fill with error or success messages --></p>
+        </section>
+
+        <section id="reviews-view">
+            <h2>Explore Movie Reviews!</h2>
+            <div id="search-filter">
+                <p>Filters:</p>
+                <input id="search-bar" type="text" placeholder="Filter Reviews by Name">
+            </div>
+            <div id="review-articles">
+                <!-- Fill with reviews using JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Thank you for visiting!</h3>
+        <p>All images that are not my own are cited in source code.</p>
+    </footer>
+</body>
+
+</html>
