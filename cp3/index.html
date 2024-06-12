@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: May 26th, 2024
+
+    This is the index.html page for my Higher or Lower game using the Spotify
+    API. It currently features a menu and game view, with the game view UI
+    featuring two places for artist info to appear, a panel of buttons, and
+    a message area.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Higher or Lower: Spotify Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" 
+     rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="utils.js"></script>
+    <script defer src="spotify.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Higher or Lower: Spotify Edition</h1>
+    </header>
+
+    <main>
+        <section id="menu-view">
+            <h2>Welcome to Higher or Lower!</h2>
+            <p>
+                In this game that tests both your knowledge and intuition, your 
+                goal is to guess whether the artist on the right has a higher 
+                number or lower number of followers than the artist on the left.
+                Good luck!
+            </p>
+            <button id="start-btn">Start</button>
+        </section>
+
+        <section id="game-view" class="hidden">
+            <h2>Score: <span id="score">0</span></h2>
+
+            <div id="play-area">
+                <article id="current-artist">
+                    <!-- Fill with artist with known followers -->
+                </article>
+    
+                <div>
+                    <button id="higher-btn">Higher?</button>
+                    <p>or</p>
+                    <button id="lower-btn">Lower?</button>
+                </div>
+    
+                <article id="next-artist">
+                    <!-- Fill with artist with unknown followers -->
+                </article>
+            </div>
+
+            <div id="message-area">
+                <p><!-- Fill with error or game messages --></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Inpsired by "Spotify Game!" (HW3)</p>
+        <p>
+            All data and images are taken from 
+            <a href="https://developer.spotify.com/documentation/web-api/reference/#/">Spotify</a>
+        </p>
+    </footer>
+</body>
+
+</html>

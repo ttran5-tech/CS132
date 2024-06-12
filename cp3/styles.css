@@ -1,0 +1,128 @@
+/*
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: May 26th, 2024
+
+    This is the styles.css page for my Higher or Lower game using the Spotify 
+    API. Here, I give my page a consistent look and feel resembling the 
+    Spotify page.
+*/
+
+.hidden, #menu-view.hidden, #game-view.hidden, main article > p.hidden {
+    display: none;
+}
+
+body, #menu-view, #game-view, #play-area, #current-artist, #next-artist,
+#play-area > div, article {
+    display: flex;
+}
+
+body, #menu-view, #game-view, #current-artist, #next-artist, #play-area > div,
+article {
+    flex-direction: column;
+}
+
+#menu-view, #game-view, #current-artist, #next-artist {
+    align-items: center;
+}
+
+#game-view, #game-view > div {
+    justify-content: space-between;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+body, button {
+    font-family: 'Signika', sans-serif;
+}
+
+h1 {
+    font-size: 36pt;
+}
+
+h2 {
+    font-size: 30pt;
+    border-bottom: 4px solid #191414;
+}
+
+h2, #menu-view > p, #start-btn {
+    width: 30%;
+}
+
+h3 {
+    font-size: 24pt;
+}
+
+p, button {
+    font-size: 18pt;
+}
+
+button {
+    border-radius: 25px;
+    padding: 20px;
+}
+
+button, #message-area {
+    font-weight: 700;
+}
+
+header, footer {
+    background-color: #191414;
+}
+
+header, footer, main, a {
+    color: white;
+}
+
+header, footer, main {
+    padding: 15px;
+}
+
+header, footer, main {
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    background-color: #1DB954;
+}
+
+main, button {
+    color: #191414;
+}
+
+#current-artist, #next-artist {
+    width: 40%;
+}
+
+#current-artist, #next-artist, #message-area {
+    border: 2px solid #191414;
+}
+
+#current-artist > img, #next-artist > img {
+    width: 100%;
+}
+
+#game-view > div {
+    width: 60%;
+}
+
+#play-area > div {
+    align-self: center;
+}
+
+#higher-btn.correct, #lower-btn.correct {
+    background-color: aqua;
+}
+
+#higher-btn.incorrect, #lower-btn.incorrect {
+    background-color: red;
+}
+
+#message-area {
+    margin-top: 10px;
+    height: 100px;
+}
