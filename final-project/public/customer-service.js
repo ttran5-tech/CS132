@@ -82,17 +82,9 @@
 
         const params = new FormData(form);
 
-        let body = {};
-        for (const pair of params.entries()) {
-            body[pair[0]] = pair[1];
-        }
-
         await fetch(url, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(body)
+            body: params
         })
         .then(checkStatus)
         .then(displaySuccessMessage)
