@@ -1,6 +1,7 @@
 // Packages and express setup
 const express = require('express');
 const fs = require('fs/promises');
+const multer = require("multer");
 const app = express();
 
 // Port number
@@ -25,8 +26,10 @@ const FEEDBACK_PARAMETERS = ['name', 'email', 'message'];
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
 
-// Add JSON parsing middleware, used for POST endpoints
+// Add POST endpoint middleware
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(multer().none());
 
 // Get all cards
 app.get('/api/cards', async (req, res, next) => {
