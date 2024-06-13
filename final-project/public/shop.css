@@ -1,0 +1,145 @@
+/*
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: June 13th, 2024
+
+    This is the shop.css page for my e-commerce site selling Yu-Gi-Oh cards.
+    It gives my shop-specific elements a consistent look and feel centered 
+    around the theme of ancient Egypt.
+*/
+
+.selected, figure.selected, #stars {
+    background-color: bisque;
+}
+
+.inactive, span.inactive {
+    opacity: 25%;
+}
+
+.card-display, .card-display > figure > div, #search-filter, #product > div, 
+#product figure > div, #product ul, #cart > div, #stars, #search-filter > div, 
+#stars > span {
+    display: flex;
+}
+
+#product ul {
+    flex-direction: column;
+}
+
+#search-filter {
+    justify-content: space-between;
+}
+
+#product > div {
+    justify-content: space-evenly;
+}
+
+#product ul {
+    justify-content: center;
+}
+
+.card-display > figure > div, #product figure > div, #stars > span {
+    align-items: center;
+}
+
+#product {
+    margin: 15px;
+}
+
+#product ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 5px;
+    column-gap: 25px;
+}
+
+#product li {
+    font-size: 30pt;
+}
+
+#product figure {
+    width: 30%;
+}
+
+#product figcaption {
+    font-size: 18pt;
+}
+
+#search-filter, #product > div {
+    margin-top: 10px;
+}
+
+.card-display > figure {
+    width: 15%;
+}
+
+.card-display figcaption, #product figcaption {
+    text-align: center;
+}
+
+.card-display figcaption {
+    font-size: 12pt;
+}
+
+.card-display img, #product img, #stars img {
+    width: 100%;
+}
+
+#cart-icon {
+    align-self: flex-end;
+    margin-left: auto;
+    width: 50px;
+    margin-right: 20px;
+}
+
+#cart-icon p {
+    margin: 10px;
+}
+
+#cart {
+    min-width: 15%;
+    max-width: 20%;
+    text-align: center;
+    font-size: 12pt;
+}
+
+#cart img {
+    width: 100%;
+}
+
+.subtract-btn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.subtract-btn:hover {
+    height: 30px;
+}
+
+#exit-cart-btn {
+    align-self: flex-start;
+}
+
+.add-btn, #search-filter button {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.add-btn:hover {
+    height: 30px;
+}
+
+#stars {
+    width: 25%;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#stars > span {
+    margin: 2px;
+}
+
+#stars button {
+    margin-left: 10px;
+    text-wrap: nowrap;
+}
