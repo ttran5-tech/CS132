@@ -8,7 +8,11 @@
     around the theme of ancient Egypt.
 */
 
-.selected, figure.selected, #stars {
+main.hidden, #product.hidden, #cart.hidden {
+    display: none;
+}
+
+.selected, figure.selected, #stars, #cart {
     background-color: bisque;
 }
 
@@ -16,17 +20,16 @@
     opacity: 25%;
 }
 
-.card-display, .card-display > figure > div, #search-filter, #product > div, 
-#product figure > div, #product ul, #cart > div, #stars, #search-filter > div, 
-#stars > span {
+.card-display, #search-filter, #product > div, #cart > div, 
+#search-filter > div, #stars, #stars > span, #cart-icon, figure > div, #cart {
     display: flex;
 }
 
-#product ul {
+body > div, #cart > div, #cart {
     flex-direction: column;
 }
 
-#search-filter {
+#search-filter, #cart-icon {
     justify-content: space-between;
 }
 
@@ -34,23 +37,22 @@
     justify-content: space-evenly;
 }
 
-#product ul {
-    justify-content: center;
-}
-
-.card-display > figure > div, #product figure > div, #stars > span {
+#stars > span, #cart, #cart-icon, figure > div {
     align-items: center;
 }
 
-#product {
+body > div {
+    flex-grow: 1;
+}
+
+#product, #cart {
     margin: 15px;
 }
 
 #product ul {
     list-style-type: none;
-    margin: 5px;
-    padding: 5px;
-    column-gap: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #product li {
@@ -65,23 +67,43 @@
     font-size: 18pt;
 }
 
-#search-filter, #product > div {
+#product > div, #search-filter {
     margin-top: 10px;
+}
+
+#cart, #cart figure {
+    border: 2px solid black;
+}
+
+#cart, figcaption, main figure, #product figure, #product ul {
+    padding: 5px;
+}
+
+#cart-icon:active {
+    transform: translate(0px, 2px);
+}
+
+#cart-icon > p {
+    color: black;
+}
+
+figcaption, #cart {
+    text-align: center;
+}
+
+figcaption > p, #products > p {
+    color: #165365;
 }
 
 .card-display > figure {
     width: 15%;
 }
 
-.card-display figcaption, #product figcaption {
-    text-align: center;
-}
-
-.card-display figcaption {
+.card-display figcaption, #cart {
     font-size: 12pt;
 }
 
-.card-display img, #product img, #stars img {
+.card-display img, #product img, #stars img, #cart img {
     width: 100%;
 }
 
@@ -99,34 +121,19 @@
 #cart {
     min-width: 15%;
     max-width: 20%;
-    text-align: center;
-    font-size: 12pt;
 }
 
-#cart img {
-    width: 100%;
-}
-
-.subtract-btn {
+.subtract-btn, .add-btn, #search-filter button {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
 
-.subtract-btn:hover {
+.subtract-btn:hover, .add-btn:hover {
     height: 30px;
 }
 
 #exit-cart-btn {
     align-self: flex-start;
-}
-
-.add-btn, #search-filter button {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.add-btn:hover {
-    height: 30px;
 }
 
 #stars {

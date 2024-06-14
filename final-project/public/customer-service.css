@@ -10,6 +10,9 @@
 
 main, #faq, form {
     display: flex;
+}
+
+body, main, #faq, form {
     flex-direction: column;
 }
 

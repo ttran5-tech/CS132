@@ -78,7 +78,7 @@ app.get('/api/cards/:id', async (req, res, next) => {
 
         // Sends a 404 error code and reports if the card ID wasn't found
         if (!card) {
-            raiseError(Error(), res, next, CARD_ID_ERROR_CODE, CARD_ID_ERROR);
+            raiseError(Error(), req, res, next, CARD_ID_ERROR_CODE, CARD_ID_ERROR);
             return;
         }
 
@@ -104,7 +104,7 @@ app.post('/api/cards', async (req, res, next) => {
             if (!(parameter in req.body)) {
                 if (parameter !== 'sale_price') {
                     const errMsg = `Missing required parameter: ${parameter}.`;
-                    raiseError(Error(), res, next, PARAM_ERROR_CODE, errMsg);
+                    raiseError(Error(), req, res, next, PARAM_ERROR_CODE, errMsg);
                     return;
                 }
                 else {
@@ -124,7 +124,7 @@ app.post('/api/cards', async (req, res, next) => {
         }
         catch(err) {
             // Sends a 500 error code and uses the middleware error handler to handle the error
-            raiseError(err, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
+            raiseError(err, req, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
             return;
         }
 
@@ -145,7 +145,7 @@ app.put('/api/cards/:id', async (req, res, next) => {
 
         // Sends a 404 error code and reports if the card ID wasn't found
         if (!card) {
-            raiseError(Error(), res, next, CARD_ID_ERROR_CODE, CARD_ID_ERROR);
+            raiseError(Error(), req, res, next, CARD_ID_ERROR_CODE, CARD_ID_ERROR);
             return;
         }
 
@@ -163,7 +163,7 @@ app.put('/api/cards/:id', async (req, res, next) => {
         }
         catch(err) {
             // Sends a 500 error code and uses the middleware error handler to handle the error
-            raiseError(err, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
+            raiseError(err, req, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
             return;
         }
 
@@ -184,7 +184,7 @@ app.delete('/api/cards/:id', async (req, res, next) => {
 
         // Sends a 404 error code and reports if the card ID wasn't found
         if (!card) {
-            raiseError(Error(), res, next, CARD_ID_ERROR_CODE, CARD_ID_ERROR);
+            raiseError(Error(), req, res, next, CARD_ID_ERROR_CODE, CARD_ID_ERROR);
             return;
         }
 
@@ -196,7 +196,7 @@ app.delete('/api/cards/:id', async (req, res, next) => {
         }
         catch(err) {
             // Sends a 500 error code and uses the middleware error handler to handle the error
-            raiseError(err, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
+            raiseError(err, req, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
             return;
         }
 
@@ -220,7 +220,7 @@ app.post('/api/feedback', async (req, res, next) => {
         for (const parameter of FEEDBACK_PARAMETERS) {
             if (!req.body[parameter]) {
                 const errMsg = `Please provide a valid ${parameter}.`;
-                raiseError(Error(), res, next, PARAM_ERROR_CODE, errMsg);
+                raiseError(Error(), req, res, next, PARAM_ERROR_CODE, errMsg);
                 return;
             }
             else {
@@ -237,7 +237,7 @@ app.post('/api/feedback', async (req, res, next) => {
         }
         catch(err) {
             // Sends a 500 error code and uses the middleware error handler to handle the error
-            raiseError(err, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
+            raiseError(err, req, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
             return;
         }
 
@@ -287,7 +287,7 @@ async function readFromFile(file, res, next) {
         return JSON.parse(data);
     } 
     catch (err) {
-        raiseError(err, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
+        raiseError(err, req, res, next, SERVER_ERROR_CODE, SERVER_ERROR);
         return null;
     }
 }
@@ -296,13 +296,14 @@ async function readFromFile(file, res, next) {
  * Raises error with the given code and message for the error handler middleware to handle
  * appropriately.
  * @param {Error} err - Error that was encountered
+ * @param {express.Request} req - The request object
  * @param {express.Response} res - The response object to send error message to
  * @param {express.NextFunction} next - The "next" middleware function
  * @param {number} code - The HTTP status code to return
  * @param {string} message - The error message to send
  * @returns {void}
  */
-function raiseError(err, res, next, code, message) {
+function raiseError(err, req, res, next, code, message) {
     res.status(code);
     err.message = message;
     next(err);

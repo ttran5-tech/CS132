@@ -8,40 +8,39 @@
     ancient Egypt.
 */
 
-.hidden, #main.hidden, #product.hidden, #cart.hidden {
+.hidden {
     display: none;
 }
 
-body, body > div, nav > ul, #cart-icon, #cart figure > div, #cart,
-header > div {
+body, nav > ul, header > div {
     display: flex;
 }
 
-body > div, #cart > div, #cart {
-    flex-direction: column;
-}
-
-body, #cart-icon {
-    justify-content: space-between;
-}
-
-nav > ul, #cart-icon, #cart figure > div, #cart {
-    align-items: center;
-}
-
-body > div, main {
-    flex-grow: 1;
-}
-
 body {
+    justify-content: space-between;
     min-height: 100vh;
     margin: 0;
     font-family: 'Cinzel', sans-serif;
     background-color: #FFC077;
 }
 
+nav > ul {
+    align-items: center;
+    list-style-type: none;
+    margin: 5px;
+    column-gap: 30px;
+}
+
+main {
+    flex-grow: 1;
+}
+
 body, nav a {
     color: #AD0A08;
+}
+
+body, button {
+    font-weight: 700;
 }
 
 h2, h3 {
@@ -53,19 +52,16 @@ h1, h2, h3 {
     display: inline-block;
 }
 
-input, select, button, textarea, #cart, nav, footer {
+input, select, button, textarea, nav, footer {
     background-color: bisque;
-}
-
-input, select, button, textarea, #cart, #cart figure, nav, footer {
     border: 2px solid black;
 }
 
-header, main, nav > ul, #cart, figcaption, main figure, #product figure {
+header, main, nav > ul {
     padding: 5px;
 }
 
-header, main, footer, #cart {
+header, main, footer {
     margin: 15px;
 }
 
@@ -77,12 +73,6 @@ header > div > img {
 nav {
     margin-top: 10px;
     padding-left: 10px;
-}
-
-nav > ul {
-    list-style-type: none;
-    margin: 5px;
-    column-gap: 30px;
 }
 
 nav a {
@@ -98,22 +88,18 @@ nav a:hover {
     border-bottom: 2px solid #AD0A08;
 }
 
-button:active, #cart-icon:active {
+button:active {
     transform: translate(0px, 2px);
 }
 
-button, #cart-icon > p {
+button {
     color: black;
-}
-
-figcaption > p, footer > p, #products > p {
-    color: #165365;
-}
-
-body, button {
-    font-weight: 700;
 }
 
 footer {
     padding: 10px;
+}
+
+footer > p {
+    color: #165365;
 }
