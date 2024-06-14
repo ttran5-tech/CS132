@@ -1,0 +1,53 @@
+/*
+    Author: Thang Tran
+    CS 132 Spring 2024
+    Date: June 13th, 2024
+
+    This is the customer-service.css page for my e-commerce site selling 
+    Yu-Gi-Oh cards. It gives my customer-service-specific elements a 
+    consistent look and feel centered around the theme of ancient Egypt.
+*/
+
+main, #faq, form {
+    display: flex;
+}
+
+body, main, #faq, form {
+    flex-direction: column;
+}
+
+main, form {
+    align-items: center;
+}
+
+h2 {
+    align-self: center;
+}
+
+#faq, form {
+    width: 50%;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+#faq, form, form > button {
+    margin: 10px;
+}
+
+#faq > div {
+    margin: 5px;
+    border-bottom: 2px solid #AD0A08;
+}
+
+#faq p {
+    color: #165365;
+    font-size: 14pt;
+}
+
+form p {
+    margin-bottom: 0;
+}
+
+form p, input, textarea {
+    width: 80%;
+}
